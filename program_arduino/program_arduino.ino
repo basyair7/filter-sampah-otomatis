@@ -29,6 +29,8 @@ const int waktu = 5000;
 #define trig_3 6
 #define echo_3 5
 #define dht_pin 9
+#define pin_RX 7
+#define pin_TX 8
 #define pin_servo_1 10
 #define pin_servo_2 11
 
@@ -40,7 +42,7 @@ int hasObstacle = HIGH;
 //Max distance ultrasonic
 #define max_distance 200
 
-SoftwareSerial esp01(7, 8);
+SoftwareSerial esp01(pin_RX, pin_TX);
 //NewPing sonar1(trig_1, echo_1, max_distance);
 NewPing sonar2(trig_2, echo_2, max_distance);
 NewPing sonar3(trig_3, echo_3, max_distance);
