@@ -15,7 +15,7 @@
 #define kapasitas_0 20
 
 //waktu pembacaan sensor
-const int waktu = 5000;
+const int waktu = 10000; //10 detik
 
 //Persentase Kelembaban sampah
 #define kelembaban_sampah 85
