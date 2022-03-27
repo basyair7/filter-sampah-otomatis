@@ -152,7 +152,6 @@ void loop() {
   
   if(hasObstacle == LOW){
     delay(waktu);
-    Serial.println(pemilah_ano_organik());
     if(pemilah_ano_organik() <= kelembaban_sampah){
       if(kapasitas_1() == 100){
         gerak_standby();
@@ -183,6 +182,7 @@ void loop() {
   else {
     //TODO
     gerak_standby();
+    Serial.println(pemilah_ano_organik());
   }
  
   
