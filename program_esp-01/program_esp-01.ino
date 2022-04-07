@@ -3,18 +3,26 @@
 #include <ArduinoJson.h>
 #include <FirebaseESP8266.h>
 
+// Pin Komunikasi Serial
+#define rx D6 // to pin arduino 8
+#define tx D7 // to pin arduino 7
+
+// Setting find WiFi Hotspot
 #define WIFI_SSID "@Wifi.com"
 #define WIFI_PASSWORD "Hotspot_ahul07"
+
+// Setting Firebase database
 #define FIREBASE_HOST "https://smart-trash-17292-default-rtdb.asia-southeast1.firebasedatabase.app/"
 #define FIREBASE_AUTH "jFwHLTHsMtkNksCO9e6TLYoAT8dhsY9zsJiCspxb"
 
+// root json firebase
 const String path_1 = "data_sensor/tongsampah_1";
 const String path_2 = "data_sensor/tongsampah_2";
 const String path_3 = "data_sensor/tongsampah_3";
 
 
 FirebaseData firebaseData; //firebase function
-SoftwareSerial arduino_board(D6, D7); //0 = 8 UNO RX and 2 = 7 UNO TX
+SoftwareSerial arduino_board(rx, tx);
 
 //void ICACHE_RAM_ATTR loop(); // jika nodemcu intrrupt
 
